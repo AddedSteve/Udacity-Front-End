@@ -1,27 +1,27 @@
-/* HEADER SECTION*/
+// HEADER SECTION
 
 .grey-divide {
-	height: 5px;
-	width: 100%;
-	background-color: #BCBBBB;
+  background-color: #bcbbbb;
+  height: 5px;
+  width: 100%;
 }
 
 
-/* BODY SECTION */
+// BODY SECTION
 
 #hero-image {
-	max-width: 100%;
+  max-width: 100%;
 }
 
 
 .feature {
-	width: 30%;
-	max-width: 300px;
-	text-align: center;
-	display: inline-block;
+  display: inline-block;
+  max-width: 300px;
+  text-align: center;
+  width: 30%;
 }
 
 
-.feature img {
-	width: 100%;
+img {
+  width: 100%;
 }
