@@ -1,4 +1,18 @@
-// HEADER SECTION
+.body-div {
+  margin: auto;
+  max-width: 70%;
+}
+
+
+header img {
+  height: auto;
+  width: 100px;
+  height: auto;
+}
+
+.header-details, header img {
+  display: inline-block;
+}
 
 .grey-divide {
   background-color: #bcbbbb;
@@ -7,9 +21,8 @@
 }
 
 
-// BODY SECTION
 
-#hero-image {
+.hero-image {
   max-width: 100%;
 }
 
@@ -21,7 +34,7 @@
   width: 30%;
 }
 
-
-img {
-  width: 100%;
+.feature img {
+  width: 200px;
+  height: auto;
 }
