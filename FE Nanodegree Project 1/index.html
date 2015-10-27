@@ -3,39 +3,45 @@
 	<head>
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0">
-    
+
 		<title>Front End Ninja</title>
 		<link rel="stylesheet" href="css/style.min.css">
 	</head>
 	<body>
-		<div class="body-div desk-one-sixth">
-			<header>
-				<img src="img/udacity-logo.jpg" alt="Udacity">
-				<div class="header-details">
-					<h1>Steve O'Gallagher</h1>
-					<h3>Front End Ninja</h3>
-				</div>
-				<div class="grey-divide"></div>
-			</header>
-			<article>
-				<img class="hero-image" src="img/hero-image.jpg">
-				<h2>Featured Work</h2>
-				<div class="feature">
-					<img src="img/appify.jpg">
-					<h2>APPIFY</h2>
-					<h4>https://github.com/udacity/Appify/</h4>
-				</div>
-				<div class="feature">
-					<img src="img/sunflower.jpg">
-					<h2>SUNFLOWER</h2>
-					<h4>https://github.com/udacity/Sunflower/</h4>
-				</div>
-				<div class="feature">
-					<img src="img/bokeh.jpg">
-					<h2>BOKEH</h2>
-					<h4>https://github.com/udacity/Bokeh/</h4>
-				</div>
-			</article>
+		<div class="body-div grid">
+				<header class="grid__item one-whole">
+					<div class="grid">
+						<div class="grid__item one-sixth">
+							<img src="img/udacity-logo.jpg" alt="Udacity">
+						</div><!--
+					--><div class="grid__item five-sixths header-details">
+							<h1>Steve O'Gallagher</h1>
+							<h3>Front End Ninja</h3>
+						</div><!--
+					--><div class="grid__item one-whole">
+							<div class="grey-divide"></div>
+						</div>
+					</div>
+				</header><!--
+			--><article class="grid__item one-whole">
+					<img class="hero-image" src="img/hero-image.jpg">
+					<h2>Featured Work</h2>
+					<div class="feature">
+						<img src="img/appify.jpg">
+						<h2>APPIFY</h2>
+						<h4>https://github.com/udacity/Appify/</h4>
+					</div>
+					<div class="feature">
+						<img src="img/sunflower.jpg">
+						<h2>SUNFLOWER</h2>
+						<h4>https://github.com/udacity/Sunflower/</h4>
+					</div>
+					<div class="feature">
+						<img src="img/bokeh.jpg">
+						<h2>BOKEH</h2>
+						<h4>https://github.com/udacity/Bokeh/</h4>
+					</div>
+				</article>	
 		</div>
 	</body>
 </html>

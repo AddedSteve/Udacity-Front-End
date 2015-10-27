@@ -18,10 +18,38 @@
 @import "inuit.css/inuit";
 
 
-
-
-
 /**
  * She’s all yours, cap’n... Begin importing your stuff here.
  */
 //@import "ui/example";
+
+
+.body-div {
+  margin: auto;
+  max-width: 70%;
+}
+
+.header-details {
+  text-align: right;
+}
+
+header img {
+  height: auto;
+  width: 100px;
+  height: auto;
+}
+
+.grey-divide {
+  background-color: #bcbbbb;
+  height: 5px;
+  width: 100%;
+}
+
+.hero-image {
+  max-width: 100%;
+}
+
+.feature img {
+  width: 200px;
+  height: auto;
+}
