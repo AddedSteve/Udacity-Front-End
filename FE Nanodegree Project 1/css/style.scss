@@ -23,20 +23,34 @@
  */
 //@import "ui/example";
 
+h2 {
+  padding: 10px 0px 0px;
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: #bcbbbb;
+}
 
 .body-div {
   margin: auto;
   max-width: 70%;
+  color: #676857;
+}
+
+header {
+  margin: 20px 0px 0px;
+  img {
+    height: auto;
+    width: 150px;
+    height: auto;
+  }
 }
 
 .header-details {
   text-align: right;
-}
-
-header img {
-  height: auto;
-  width: 100px;
-  height: auto;
+  vertical-align: bottom;
 }
 
 .grey-divide {
@@ -49,7 +63,10 @@ header img {
   max-width: 100%;
 }
 
-.feature img {
-  width: 200px;
-  height: auto;
+.featured-work {
+  color: #bcbbbb;
+}
+
+.feature {
+  text-align: center;
 }
