@@ -30,7 +30,9 @@ h1, h2, h3, h4, p, a {
 
 h1 {
   font-weight: 100;
-  font-size: 42px;
+  font-size: 46px;
+  margin: 0px;
+  vertical-align: top;
 }
 
 h2 {
@@ -59,8 +61,8 @@ header {
   margin: 20px 0px 0px;
   img {
     height: auto;
-    width: 150px;
-    height: auto;
+    width: 120px;
+    margin: 0px auto 10px;
   }
 }
 
