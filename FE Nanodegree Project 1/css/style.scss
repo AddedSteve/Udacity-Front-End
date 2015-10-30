@@ -23,6 +23,9 @@
  */
 //@import "ui/example";
 
+
+/* TEXT STYLING */
+
 h1, h2, h3, h4, p, a {
   font-family: Helvetica, sans-serif;
   font-weight: normal;
@@ -48,6 +51,8 @@ a {
   text-decoration: none;
   color: #bcbbbb;
 }
+
+/* LAYOUT STYLING */
 
 .container {
   color: #676857;

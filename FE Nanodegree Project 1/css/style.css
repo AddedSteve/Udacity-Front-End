@@ -2964,6 +2964,7 @@ label,
 /**
  * She’s all yours, cap’n... Begin importing your stuff here.
  */
+/* TEXT STYLING */
 h1, h2, h3, h4, p, a {
   font-family: Helvetica, sans-serif;
   font-weight: normal;
@@ -2990,6 +2991,7 @@ a {
   color: #bcbbbb;
 }
 
+/* LAYOUT STYLING */
 .container {
   color: #676857;
   margin: auto;
