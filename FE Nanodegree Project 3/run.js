@@ -1,2 +1,2 @@
-var amy = carlike({}, 1);
-amymove();
+var amy = new Car(3);
+amy.move();
