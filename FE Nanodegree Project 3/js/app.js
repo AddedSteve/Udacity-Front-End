@@ -51,7 +51,7 @@ Enemy.prototype.newLocation = function() {
 Enemy.prototype.newSpeed = function() {
     var max_speed = 500;
     var min_speed = 200;
-    this.speed = Math.random() * (max_speed - min_speed + 1) + min_speed;
+    this.speed = Math.random() * (max_speed - min_speed) + min_speed;
 };
 
 
