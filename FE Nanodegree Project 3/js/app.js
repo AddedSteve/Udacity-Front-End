@@ -8,10 +8,9 @@ var Enemy = function() {
     this.sprite = 'images/enemy-bug.png';
     this.x = -100;
 
-    var yLocations = [65, 145, 225];
-    this.y = yLocations[Math.floor(Math.random() * yLocations.length)];
-
+    this.newLocation();
     this.newSpeed();
+
 };
 
 // Update the enemy's position, required method for game
@@ -24,13 +23,24 @@ Enemy.prototype.update = function(dt) {
         this.x = this.x + (this.speed * dt);
     } else {
         this.x = -100;
+        this.newLocation();
         this.newSpeed();
+    };
+
+    if ((this.y == player.y) && (player.x  > this.x) && (player.x < this.x + 20)) {
+        collision = true;
+        player.currentScore = player .currentScore - 10;
     };
 };
 
 // Draw the enemy on the screen, required method for game
 Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+};
+
+Enemy.prototype.newLocation = function() {
+    var yLocations = [65, 145, 225];
+    this.y = yLocations[Math.floor(Math.random() * yLocations.length)];
 };
 
 Enemy.prototype.newSpeed = function() {
@@ -47,14 +57,35 @@ var Player = function() {
 
     this.sprite = 'images/char-boy.png';
     this.reset();
+
+    this.currentScore = 0;
+    this.score = "Score: " + String(this.currentScore);
+    //this.drawScore();
 };
 
 Player.prototype.update = function(dt) {
+
+    if (collision == true) {
+        this.render();
+        this.reset();
+        collision = false;
+    };
 
 }
 
 Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+
+    this.score = "Score: " + String(this.currentScore);
+
+    ctx.font = "20pt Impact";
+    ctx.textAlign = "center";
+
+    ctx.fillStyle = "white";
+    ctx.fillText(this.score, 430, 580);
+    ctx.strokeStyle = "black";
+    ctx.lineWidth = 2;
+    ctx.strokeText(this.score, 430, 580);
 }
 
 Player.prototype.handleInput = function(key) {
@@ -64,9 +95,11 @@ Player.prototype.handleInput = function(key) {
         this.x = this.x + 100;
 
     } else if (key == "up") {
-        if (this.y > 55) {
+        if (this.y > 100) {
             this.y = this.y - 80; 
         } else {
+            this.currentScore = this.currentScore + 20;
+            this.render();
             this.reset();
         }
     } if (key == "down" && this.y < 375) {
@@ -76,7 +109,7 @@ Player.prototype.handleInput = function(key) {
 
 Player.prototype.reset = function() {
     this.x = 200;
-    this.y = 375;
+    this.y = 385;
 };
 
 // Now instantiate your objects.
@@ -88,6 +121,12 @@ var enemy2 = new Enemy();
 
 var allEnemies = [enemy0, enemy1, enemy2];
 var player = new Player();
+
+var collision = false;
+
+
+
+
 
 
 // This listens for key presses and sends the keys to your
