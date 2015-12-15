@@ -41,7 +41,7 @@ Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
-// Give the evemy a new location
+// Give the enemy a new location
 Enemy.prototype.newLocation = function() {
     var yLocations = [65, 145, 225];
     this.y = yLocations[Math.floor(Math.random() * yLocations.length)];
