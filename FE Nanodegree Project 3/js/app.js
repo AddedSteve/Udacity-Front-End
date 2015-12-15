@@ -47,7 +47,7 @@ Enemy.prototype.newLocation = function() {
     this.y = yLocations[Math.floor(Math.random() * yLocations.length)];
 };
 
-// Give the eney a new speed
+// Give the enemy a new speed
 Enemy.prototype.newSpeed = function() {
     var max_speed = 500;
     var min_speed = 200;
